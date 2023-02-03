@@ -1,17 +1,15 @@
 #include <stdio.h>
 
-// function defination 
-int square(int num) {
-  return num*num;
-}
-
 int main(void) {
-  int number, result;
-  printf("Enter the number: ");
-  scanf("%d",&number);
-
-  // function call 
-  result = square(number);
-  printf("Square of %d = %d\n",number,result);
+  int num1,num2,temp;
+  printf("Enter the numbers: ");
+  scanf("%d%d",&num1,&num2);
+  printf("Before swaping:\nnum1 = %d\nnum2 = %d\n",num1,num2);
+  // using third variable 
+  temp = num1;
+  num1 = num2;
+  num2 = temp;
+  printf("\n");
+  printf("After swaping:\nnum1 = %d\nnum2 = %d",num1,num2);
   return 0;
 }
